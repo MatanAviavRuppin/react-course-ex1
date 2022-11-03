@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+     <head>
+          <meta charset="utf-8"/>
+          <meta name="viewport" content="width=device-width,initial-scale=1"/>
+          <title>react-course-ex1</title>
+          <link rel="stylesheet" href="./static/bulma/css/bulma.css" />
+          <link rel="stylesheet" href="./static/style.css" />
+          <script type="text/javascript" src="./core/Ingredient.js"></script>
+          <script type="text/javascript" src="./core/DishRecipe.js"></script>
+          <script type="text/javascript" src="./core/main.js"></script>
+     </head>
+
+     <body class="pb-5">
+          <!-- add Ingredient modal -->
+          <div class="modal" id="add-ingredient-modal">
+               <div class="modal-background"></div>
+               <div class="modal-content">
+                    <div class="card mx-3">
+                         <div class="card-header">
+                              <div class="card-header-title">Create a New Ingredient</div>
+                              <div class="card-header-icon has-text-weight-bold is-size-4">&times;</div>
+                         </div>
+                         <div class="card-content calculated">
+                              <div class="control"><input id="inputIngName" class="input" type="text" placeholder="Name..."></div>
+                              <div class="control mt-3"><input id="inputIngImage" class="input" type="text" placeholder="Image Url..."></div>
+                              <div class="control mt-3"><input id="inputIngCals" class="input" type="text" placeholder="Calories..."></div>
+                         </div>
+                         <div class="card-footer">
+                              <span id="add-ingredient-modal-add-button" class="card-footer-item has-background-primary has-text-white">Create</span>
+                              <span class="card-footer-item card-footer-item-close">Cancel</span>
+                         </div>
+                    </div>
+               </div>
+               <button class="modal-close is-large" aria-label="close"></button>
+          </div>
+
+          <!-- add Recipe modal -->
+          <div class="modal" id="add-recipe-modal">
+               <div class="modal-background"></div>
+               <div class="modal-content">
+                    <div class="card mx-3">
+                         <div class="card-header">
+                              <div class="card-header-title">Create a New Recipe</div>
+                              <div class="card-header-icon has-text-weight-bold is-size-4">&times;</div>
+                         </div>
+                         <div class="card-content calculated">
+                              <div class="control"><input id="inputRecName" class="input" type="text" placeholder="Name..."></div>
+                              <div class="control mt-3"><input id="inputRecMethod" class="input" type="text" placeholder="Cooking Method..."></div>
+                              <div class="control mt-3"><input id="inputRecTime" class="input" type="text" placeholder="Cooking Time..."></div>
+                              <div class="control mt-3"><input id="inputRecImage" class="input" type="text" placeholder="Image Url..."></div>
+
+                              <div class="mt-5">
+                                   <div class="is-size-5">Choose Ingredients:</div>
+                                   <div id="ingredients-render" class="columns is-mobile mt-1"></div>
+                              </div>
+                         </div>
+                         <div class="card-footer">
+                              <span id="add-recipe-modal-add-button" class="card-footer-item has-background-primary has-text-white">Create</span>
+                              <span class="card-footer-item card-footer-item-close">Cancel</span>
+                         </div>
+                    </div>
+               </div>
+               <button class="modal-close is-large" aria-label="close"></button>
+          </div>
+
+          <!-- show ingredients modal -->
+          <div class="modal" id="show-recipe-ingredients-modal">
+               <div class="modal-background"></div>
+               <div class="modal-content">
+                    <div class="card mx-3">
+                         <div class="card-header">
+                              <div class="card-header-title">Ingredients of This Recipe</div>
+                              <div class="card-header-icon has-text-weight-bold is-size-4">&times;</div>
+                         </div>
+                         <div class="card-content calculated">
+                              <div id="recipe-ingredients-render" class="columns is-mobile mt-1"></div>
+                         </div>
+                         <div class="card-footer">
+                              <span class="card-footer-item card-footer-item-close">Close</span>
+                         </div>
+                    </div>
+               </div>
+               <button class="modal-close is-large" aria-label="close"></button>
+          </div>
+
+          <div class="container mt-5 px-5">
+               <div class="has-text-centered">
+                    <div class="is-size-2 pb-5">Dishs</div>
+                    <span class="is-size-4 mt-4 pb-2">Actions:</span><div class="pt-2 is-hidden-desktop"></div>
+                    <button id="add-recipe-modal-open-button" class="button is-info">New Recipe</button>
+                    <button id="add-ingredient-modal-open-button" class="button is-info">New Ingredient</button>
+               </div>
+               <div id="recipes-render" class="columns is-mobile is-flex-wrap-wrap mt-5"></div>
+          </div>
+     </body>
+</html>

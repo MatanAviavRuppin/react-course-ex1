@@ -1,0 +1,50 @@
+.h100p {
+     height: 100%;
+}
+
+.columns {
+     flex-wrap: wrap;
+}
+
+.modal-content {
+     max-height: 70%; 
+     overflow: hidden;
+}
+
+.card {
+     height: 100%;
+}
+
+.card-header {
+     height: 50px;
+}
+
+.card-footer {
+     height: 50px;
+}
+
+.card-footer-item {
+     cursor: pointer;
+     transition: .5s all;
+}
+
+.card-footer-item:hover {
+     opacity: 0.5;
+}
+
+.card-content.calculated {
+     height: calc(100% - 100px);
+     overflow-y: auto;
+     overflow-x: hidden;
+}
+
+.card-image {
+     height: 50%;
+     text-align: center;
+}
+
+.card-image img {
+     height: 100%;
+     width: 100%;
+     object-fit: fill;
+}
